@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  gulp:
+    container_name: gulp
+    build:
+      context: .
+      dockerfile: docker/gulp/Dockerfile
+    volumes:
+      - ./:/var/opt
+    ports:
+      - '3000:3000'
+      - '3001:3001'
